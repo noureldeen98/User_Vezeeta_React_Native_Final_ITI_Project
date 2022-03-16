@@ -1,12 +1,32 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import HomeMainComponent from './src/Components/HomeMainContent'
+import LoginComponent from './src/Components/login'
+import Departments from './src/Components/Departments'
+import { NativeBaseProvider } from 'native-base';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import HomeScreen from './src/Screens/HomeScreen';
+import DepartmentsScreen from "./src/Screens/DepartmentsScreen"
+import HomeVisitScreen from "./src/Screens/HomeVisitScreen"
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+
+
+<NativeBaseProvider>
+    <NavigationContainer>
+    <Stack.Navigator>
+      
+    <Stack.Screen name="Home" component={HomeScreen} />
+    <Stack.Screen name="Departments" component={DepartmentsScreen} />
+    <Stack.Screen name="HomeVisit"  component={HomeVisitScreen}/>
+    </Stack.Navigator>
+    </NavigationContainer>
+    </NativeBaseProvider>
+  
   );
 }
 
@@ -18,3 +38,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+
+
+   
+    {/* <View style={styles.container}>
+      <Text>Open up App.js to start working on your app!</Text>
+      <HomeMainComponent/>
+      
+      <Departments/>
+      <StatusBar style="auto" />
+    </View> */}
