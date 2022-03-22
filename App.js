@@ -9,6 +9,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './src/Screens/HomeScreen';
 import DepartmentsScreen from "./src/Screens/DepartmentsScreen"
 import HomeVisitScreen from "./src/Screens/HomeVisitScreen"
+import DoctorsOfDepartmentScreen from './src/Screens/DoctorsOfDepartment'
+import DocotrsInfoScreen from './src/Screens/DocotrsInfoScreen'
 
 const Stack = createNativeStackNavigator();
 
@@ -23,6 +25,9 @@ export default function App() {
     <Stack.Screen name="Home" component={HomeScreen} />
     <Stack.Screen name="Departments" component={DepartmentsScreen} />
     <Stack.Screen name="HomeVisit"  component={HomeVisitScreen}/>
+    <Stack.Screen name="DoctorsOfDepartmentScreen"  component={DoctorsOfDepartmentScreen}/>
+    <Stack.Screen name="DocotrsInfoScreen"  component={DocotrsInfoScreen}/>
+    
     </Stack.Navigator>
     </NavigationContainer>
     </NativeBaseProvider>
