@@ -1,17 +1,8 @@
-// Import the functions you need from the SDKs you need
-// import { initializeApp } from "firebase/app";
-// import {getFirestore} from 'firebase/firestore/lite'
-// import { getAuth } from 'firebase/auth';
-
-
 import firebase from 'firebase/compat/app'
 import 'firebase/compat/auth'
 import 'firebase/compat/firestore'
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyACcqVbcyts0Yzwdo_-6LeN_Pw_U_LA8Ng",
     authDomain: "vezeeta-website-db.firebaseapp.com",
@@ -22,16 +13,19 @@ const firebaseConfig = {
     appId: "1:118999132560:web:117741d75c1a3c81d42b15"
 };
 
-// Initialize Firebase
-// const app = initializeApp(firebaseConfig);
 
-// const db = getFirestore(app);
+////////DB teating 
+// const firebaseConfig = {
+//     apiKey: "AIzaSyAyrUawd_2Wqfl5h-I0h1zZIzT0icwYfjc",
+//     authDomain: "nth-glass-336023.firebaseapp.com",
+//     projectId: "nth-glass-336023",
+//     storageBucket: "nth-glass-336023.appspot.com",
+//     messagingSenderId: "583354460407",
+//     appId: "1:583354460407:web:5276ff9275ac491c484bf2",
+//     measurementId: "G-L7LS2X8Y4N"
+//   };
 
-// export const authentication = getAuth(app)
-// export {db}
-
-
-firebase.initializeApp(firebaseConfig);
+const app = firebase.initializeApp(firebaseConfig);
 var db = firebase.firestore();
 const auth = firebase.auth();
-export {db , auth}
+export {db , auth, app}
