@@ -2,8 +2,6 @@ import { VStack , Box ,Image ,Text} from "native-base"
 import styles from './../../StyleSheet.js/styleSheet';
 
 
-
-
 const HomeVisit=()=>{
 
     return(
