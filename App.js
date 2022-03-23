@@ -15,14 +15,26 @@ import DocotrsInfoScreen from './src/Screens/DocotrsInfoScreen'
 
 import SignupScreen from './src/Screens/SignupScreen';
 import LoginScreen from './src/Screens/LoginScreen';
-// import MainContainer from './src/Screens/navbarContainer';
-// import LogoutScreen from './src/Screens/LogoutScreen';
-// import Navbar from './src/Screens/navbarContainer';
+// <<<<<<< authmobile
+import React from 'react';
+
+
+// =======
+// // import MainContainer from './src/Screens/navbarContainer';
+// // import LogoutScreen from './src/Screens/LogoutScreen';
+// // import Navbar from './src/Screens/navbarContainer';
+// >>>>>>> master
 
 const Stack = createNativeStackNavigator();
 
+
 export default function App() {
+
+  const logn = localStorage.getItem('login');
+  const [login, setLogin] = React.useState(logn);
+  
   return (
+
 
 
 
@@ -40,6 +52,7 @@ export default function App() {
     </Stack.Navigator>
     </NavigationContainer>
     </NativeBaseProvider>
+
 
 
   );
