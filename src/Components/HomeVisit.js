@@ -3,7 +3,9 @@ import styles from './../../StyleSheet.js/styleSheet';
 
 
 const HomeVisit=()=>{
+
     return(
+       
         <VStack>
             <Box alignItems="center" bg="blue">
                 <VStack>

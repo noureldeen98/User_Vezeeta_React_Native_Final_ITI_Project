@@ -9,30 +9,64 @@ const styles = StyleSheet.create({
         backgroundColor: 'lightgray',
         alignItems: 'center',
         justifyContent: 'center',
+
+        alignItems:"center",
+      },
+    smallBoxes:{
+        borderRadius:15,
+         backgroundColor: 'white',
+        color:"black",
+        margin:4,
+        height:100,
+        width:100
+
     },
-    smallBoxes: {
-        borderRadius: 15,
-        // backgroundColor: 'blue',
-        color: "black",
-        margin: 4,
-        height: 100,
-        width: 100
-    },
+
 
     box: {
         // height:"auto",
-        marginTop: 5,
-        marginBottom: 3,
-        borderRadius: 15,
-        backgroundColor: "white",
-        alignItems: "center",
-        width: 350
+
+        marginTop:5,
+        marginBottom:3,
+        borderRadius:15,
+        backgroundColor:"white",
+        alignItems:"center",
+        width:350,
+        alignItems:"stretch"
 
     },
-    inputField: {
-        borderRadius: 15,
+    departmanetsBoxes:{
+         backgroundColor:"white",
+         color:"blue"
+    },
+    inputField:{
+        borderRadius:15,
 
     },
+    bookingButton:{
+       width:150,
+       backgroundColor:"#DCF1ED",
+      
+      
+       margin:5,
+       alignItems:"stretch"
+
+    },
+    card:{
+        
+        backgroundColor:"white",
+        color:"black",
+        marginBottom:"7px",
+
+
+
+    },
+    timeTableBox:{
+      display:"flex" , 
+      flexDirection:"row"
+      
+    },
+
 
 
     ////style Auth
@@ -85,6 +119,7 @@ const styles = StyleSheet.create({
         borderColor: '#fff',
         borderWidth: 1,
     },
+
 
 
 
