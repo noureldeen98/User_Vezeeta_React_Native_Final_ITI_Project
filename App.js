@@ -10,12 +10,18 @@ import DepartmentsScreen from "./src/Screens/DepartmentsScreen"
 import HomeVisitScreen from "./src/Screens/HomeVisitScreen"
 import SignupScreen from './src/Screens/SignupScreen';
 import LoginScreen from './src/Screens/LoginScreen';
-import MainContainer from './src/Screens/navbarContainer';
-import LogoutScreen from './src/Screens/LogoutScreen';
-import Navbar from './src/Screens/navbarContainer';
+import React from 'react';
+
+
+
 const Stack = createNativeStackNavigator();
 
+
 export default function App() {
+
+  const logn = localStorage.getItem('login');
+  const [login, setLogin] = React.useState(logn);
+  
   return (
 
 
@@ -27,15 +33,11 @@ export default function App() {
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Departments" component={DepartmentsScreen} />
           <Stack.Screen name="HomeVisit" component={HomeVisitScreen} />
-          <Stack.Screen name='Nav' component={MainContainer} />
         </Stack.Navigator>
       </NavigationContainer>
-  
-
-      {/* <NavigationContainer>
-        <Navbar/>
-      </NavigationContainer> */}
     </NativeBaseProvider>
+
+
 
   );
 }

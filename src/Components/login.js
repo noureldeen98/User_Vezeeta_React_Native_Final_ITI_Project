@@ -5,8 +5,7 @@ import { app, auth } from '../../firebaseConfiguration';
 import { Link, useNavigation } from '@react-navigation/native';
 import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'firebase/auth';
 import styles from '../../StyleSheet.js/styleSheet';
-import AsyncStorage from '@react-native-community/async-storage'
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 const uri = 'https://t4.ftcdn.net/jpg/02/32/90/73/360_F_232907392_acgOf8TUD5wRuTb5KvnTfpfFc4RhrwgI.jpg'
@@ -30,9 +29,9 @@ const LoginComponent = () => {
     const handleSignIn = async () => {
         try {
             const user = await signInWithEmailAndPassword(auth, email, password);
-            AsyncStorage.setItem("Login", true);
+            AsyncStorage.setItem("login", true);
             AsyncStorage.setItem('UserEmail',user.user.reloadUserInfo.email);
-            AsyncStorage.setItem('ID', user.user.uid)
+            AsyncStorage.setItem('ID', user.user.uid);
             navigation.navigate('Home');
             // console.log(user);
 
@@ -40,13 +39,7 @@ const LoginComponent = () => {
             console.log(err);
         }
     };
-
-    // const logout = async () => {
-    //     await signOut(auth);
-    //     // localStorage.removeItem("UserEmail");
-    //     // localStorage.setItem("Login", false);
-    // };
-
+    
     return (
         <View style={styles.containerAuth}>
             <Image source={{ uri }} style={[styles.imageAuth, StyleSheet.absoluteFill]} alt="profile" />
