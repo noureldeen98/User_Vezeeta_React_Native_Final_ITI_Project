@@ -35,6 +35,7 @@ const SignupComponent = () => {
             navigation.navigate('Home');
             AsyncStorage.setItem('UserEmail',user.email);
             AsyncStorage.setItem('ID', user.uid);
+           
         } catch (err) {
             console.error(err);
         }

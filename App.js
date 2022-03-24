@@ -29,9 +29,11 @@ export default function App() {
 <NativeBaseProvider>
     <NavigationContainer>
     <Stack.Navigator>
+  
+    <Stack.Screen name="Home" component={HomeScreen} />
+ 
     <Stack.Screen name="Signup" component={SignupScreen} />
         <Stack.Screen name='Login' component={LoginScreen} />
-    <Stack.Screen name="Home" component={HomeScreen} />
     <Stack.Screen name="Departments" component={DepartmentsScreen} />
     <Stack.Screen name="HomeVisit"  component={HomeVisitScreen}/>
     <Stack.Screen name="DoctorsOfDepartmentScreen"  component={DoctorsOfDepartmentScreen}/>

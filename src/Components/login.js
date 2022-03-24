@@ -33,8 +33,9 @@ const LoginComponent = () => {
             AsyncStorage.setItem("Login", true);
             AsyncStorage.setItem('UserEmail',user.user.reloadUserInfo.email);
             AsyncStorage.setItem('ID', user.user.uid)
+        
             navigation.navigate('Home');
-            // console.log(user);
+             console.log(user);
 
         } catch (err) {
             console.log(err);
