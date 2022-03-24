@@ -2,7 +2,7 @@ import { HStack, VStack, Image, Box, ScrollView, Text, Avatar, Button, Modal, Fo
 
 import { useState, useEffect } from "react";
 import styles from './../../StyleSheet.js/styleSheet';
-import AsyncStorage from '@react-native-community/async-storage'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 import { db , auth } from "../../firebaseConfiguration"
 
 

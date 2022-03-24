@@ -7,8 +7,7 @@ import { Link, useNavigation } from '@react-navigation/native';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { collection, addDoc } from 'firebase/firestore'
 import styles from './../../StyleSheet.js/styleSheet';
-import AsyncStorage from '@react-native-community/async-storage'
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const uri = 'https://t4.ftcdn.net/jpg/02/32/90/73/360_F_232907392_acgOf8TUD5wRuTb5KvnTfpfFc4RhrwgI.jpg'
 const profilePicture = 'https://play-lh.googleusercontent.com/ttLkUcwcja5-8YAhk1ndWbPEglgdoCjs2tEDEOXsd09uq6WuIL-GjWRn_a7HVJbpN06Q'
@@ -33,6 +32,7 @@ const SignupComponent = () => {
             });
             console.log(user);
             navigation.navigate('Home');
+            AsyncStorage.setItem("login", true);
             AsyncStorage.setItem('UserEmail',user.email);
             AsyncStorage.setItem('ID', user.uid);
            
